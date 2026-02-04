@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: -5934038885450478344}
   - component: {fileID: -3330126716692756896}
   - component: {fileID: -6834646891907787624}
-  - component: {fileID: 7760294729500789892}
+  - component: {fileID: 5650223816364233320}
   m_Layer: 0
-  m_Name: bullet
+  m_Name: EnemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.9716981, g: 0.40792987, b: 0.40792987, a: 1}
+  m_Color: {r: 0.10332859, g: 0.15830222, b: 0.509434, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b26b62a92447d42b15f9e26f2daa77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
-  targetTag: Enemy
+  targetTag: Player
   Damage: 10
 --- !u!114 &-3330126716692756896
 MonoBehaviour:
@@ -149,7 +149,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &7760294729500789892
+--- !u!58 &5650223816364233320
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1,15 +1,25 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     public rbMove rbmove;
-    void Start()
-    {
-        
-        rbmove = GetComponent<rbMove>();
-    }
+    public Shoot shoot;
 
     
+    void Start()
+    {
+        rbmove = GetComponent<rbMove>();
+        shoot = GetComponentInChildren<Shoot>();
+    }
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(0) && !shoot.isCooldown) 
+        {
+            StartCoroutine(shoot.shootbullet());
+        }
+    }
+
     void FixedUpdate()
     {
         float x = Input.GetAxisRaw("Horizontal");
